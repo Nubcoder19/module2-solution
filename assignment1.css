@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: gray;
+  padding: 10px;
+}
+.section-title-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: pink;
+  color: black;
+  padding: 5px 10px;
+  border-bottom-left-radius: 5px;
+}
+.section-title-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: brown;
+  color: black;
+  padding: 5px 10px;
+  border-bottom-left-radius: 5px;
+}
+.section-title-3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: yellow;
+  color: black;
+  padding: 5px 10px;
+  border-bottom-left-radius: 5px;
+}
+
+@media (min-width: 992px) {
+  .section {
+    width: calc(33.333% - 20px);
+    float: left;
+    margin-right: 20px;
+  }
+  .section:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    width: calc(50% - 20px);
+    float: left;
+    margin-right: 40px;
+  }
+  .section:nth-child(2n) {
+    margin-right: 0;
+  }
+  .section:nth-child(3) {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    width: 100%;
+    float: none;
+  }
+}
